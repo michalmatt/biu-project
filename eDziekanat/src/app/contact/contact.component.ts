@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactData } from '../shared/conatct-data.model';
+import { ContactData } from '../shared/contact-data.model';
 
 // tslint:disable-next-line:class-name
 class contactData {

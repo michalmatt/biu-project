@@ -1,1 +1,5 @@
-<p>subjects works!</p>
+<h2>Przedmioty</h2>
+<p>Lista przedmiotow:</p>
+<ul>
+  <li *ngFor="let subject of subjects">{{ subject.name }} ({{ subject.abbr }})</li>
+</ul>

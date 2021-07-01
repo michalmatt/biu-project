@@ -17,11 +17,11 @@ import {RouterModule, Routes} from '@angular/router';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'subjects', component: SubjectsComponent },
-  { path: 'subject/:subjectId/:subjectName', component: SubjectComponent },
+  { path: 'subjects/subject/:subjectId/:subjectName', component: SubjectComponent },
   { path: 'students', component: StudentsComponent },
-  { path: 'student/:studentId', component: StudentComponent },
+  { path: 'students/student/:studentId', component: StudentComponent },
   { path: 'groups', component: GroupsComponent },
-  { path: 'group/:groupId', component: GroupComponent },
+  { path: 'groups/group/:groupId', component: GroupComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
