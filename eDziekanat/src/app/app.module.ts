@@ -12,6 +12,18 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectComponent } from './subjects/subject/subject.component';
 import { GroupsComponent } from './groups/groups.component';
 import { GroupComponent } from './groups/group/group.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'subjects', component: SubjectsComponent },
+  { path: 'subject/:subjectId/:subjectName', component: SubjectComponent },
+  { path: 'students', component: StudentsComponent },
+  { path: 'student/:studentId', component: StudentComponent },
+  { path: 'groups', component: GroupsComponent },
+  { path: 'group/:groupId', component: GroupComponent },
+  { path: 'contact', component: ContactComponent }
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +40,8 @@ import { GroupComponent } from './groups/group/group.component';
     GroupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
