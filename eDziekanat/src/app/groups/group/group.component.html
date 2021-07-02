@@ -1,5 +1,22 @@
-<h2>Szczegoly dla:</h2>
-<ul>
-  <li>ID grupy: {{ groupId }}</li>
-  <li>Nazwa grupy: {{ groupName }}</li>
-</ul>
+<div>
+  <h2>Szczegoly dla:</h2>
+  <ul>
+    <li>ID grupy: {{ groupId }}</li>
+    <li>Nazwa grupy: {{ groupName }}</li>
+  </ul>
+</div>
+<div>
+  <h2>Lista przypisanych studentow:</h2>
+  <ul>
+    <li *ngFor="let groupStudent of groupStudents">{{ groupStudent.name }} {{ groupStudent.surname }} | nr indeksu: {{ groupStudent.indexId }}</li>
+  </ul>
+</div>
+<div>
+  <br>
+  Imie: <input type="text" name="label-text" #fLabelText><br>
+  Nazwisko: <input type="text" name="value" #fValue><br>
+  Nr indeksu: <input type="number" name="index" #fIndex><br>
+  <br>
+  <button class="btn btn-primary" (click)="addToGroup(createStudent(fLabelText, fValue, fIndex))">Dodaj studenta</button>
+</div>
+
