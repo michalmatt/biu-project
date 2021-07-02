@@ -2,7 +2,7 @@
   <h2>Studenci</h2>
   <p>Lista studentow:</p>
   <ul>
-    <li *ngFor="let student of students">{{ student.name }} {{ student.surname }} | nr indeksu: {{ student.indexId }}</li>
+    <app-student *ngFor="let data of students" [students]="data"></app-student>
   </ul>
   <br>
   Imie: <input type="text" name="label-text" #fLabelText><br>
