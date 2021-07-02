@@ -16,6 +16,16 @@ export class StudentsComponent implements OnInit {
     ];
   }
 
+  // tslint:disable-next-line:typedef
+  public addNewStudent(labelText: HTMLInputElement, value: HTMLInputElement, index: HTMLInputElement)
+  {
+    this.students.push({
+      name: labelText.value,
+      surname: value.value,
+      indexId: index.valueAsNumber
+    });
+  }
+
   ngOnInit(): void {
   }
 

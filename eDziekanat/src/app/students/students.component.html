@@ -1,5 +1,13 @@
-<h2>Studenci</h2>
-<p>Lista studentow:</p>
-<ul>
-  <li *ngFor="let student of students">{{ student.name }} {{ student.surname }} | nr indeksu: {{ student.indexId }}</li>
-</ul>
+<div>
+  <h2>Studenci</h2>
+  <p>Lista studentow:</p>
+  <ul>
+    <li *ngFor="let student of students">{{ student.name }} {{ student.surname }} | nr indeksu: {{ student.indexId }}</li>
+  </ul>
+  <br>
+  Imie: <input type="text" name="label-text" #fLabelText><br>
+  Nazwisko: <input type="text" name="value" #fValue><br>
+  Nr indeksu: <input type="number" name="index" #fIndex><br>
+  <br>
+  <button class="btn btn-primary" (click)="addNewStudent(fLabelText, fValue, fIndex)">Dodaj studenta</button>
+</div>
