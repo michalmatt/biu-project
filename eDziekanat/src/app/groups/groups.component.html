@@ -1,5 +1,5 @@
 <h2>Grupy</h2>
 <p>Lista grup:</p>
 <ul>
-  <li *ngFor="let group of groups">{{ group.groupId }} | {{ group.name }}</li>
+  <li *ngFor="let group of groups" routerLinkActive="active"><a routerLink="/groups/group/{{group.groupId}}/{{group.name}}">{{ group.groupId }} | {{ group.name }}</a></li>
 </ul>

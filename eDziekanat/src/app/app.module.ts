@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'students/student/:studentId', component: StudentComponent },
   { path: 'groups', component: GroupsComponent },
-  { path: 'groups/group/:groupId', component: GroupComponent },
+  { path: 'groups/group/:groupId/:groupName', component: GroupComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
